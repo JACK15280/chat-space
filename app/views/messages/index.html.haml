@@ -1,0 +1,58 @@
+%div.wrapper
+  %div.side-bar
+
+    %div.side-bar__user-name
+      %div.side-bar__user-name__top-items
+        %p.side-bar__user-name__top-items__name masa
+        %ul.side-bar__user-name__top-items__icon
+          %li.side-bar__user-name__top-items__new-group
+          = link_to "#", class: "side-bar__user-name__top-items__btn" do
+            %i.far.fa-edit
+            %span<>
+          %li.side-bar__user-name__top-items__edit-account
+          = link_to "#", class: "side-bar__user-name__top-items__btn" do
+            %i.fa.fa-cog
+            %span<>
+
+    %div.side-bar__group-list
+      %p.side-bar__group-list--name techcamp
+      %p.side-bar__group-list--message まだメッセージがありません
+
+
+  %div.chat-main
+    %div.chat-main__group-info
+      %div.chat-main__group-info--contents
+        %h2.chat-main__group-info--contents__name 
+          test
+        %ul.chat-main__group-info--contents__member-list 
+          Member :&nbsp;
+          %li.chat-main__group-info--contents__member-list-name 
+            masa
+      %div.chat-main__group-info--edit
+      = link_to "#", class: "chat-main__group-info--edit-group" do
+        Edit
+
+    %div.chat-main__message-list
+      %div.chat-main__message-list--summary
+        %div.chat-main__message-list--summary__name
+          masa&nbsp;
+        %div.chat-main__message-list--summary__daily
+          2019/11/20(Wed) 17:43:01
+      %div.chat-main__message-list--summary__message
+        おはよう！
+      %div.chat-main__message-list--summary__sub
+        %div.chat-main__message-list--summary__name 
+          masa&nbsp;
+        %div.chat-main__message-list--summary__daily
+          2019/11/20(Wed) 17:43:34
+      %div.chat-main__message-list--summary__message
+        今日は夜から雨
+
+    %div.chat-main__message-form
+      %form.chat-main__message-form__new-message
+        .chat-main__message-form__new-message__input-box
+          %input{type: "text", class: "chat-main__message-form__new-message__input-text", placeholder: "type a message"}
+          %label{class: "chat-main__message-form__new-message__input-image"}
+            %i.fa.fa-image
+            %input{type: "file", class: "chat-main__message-form__new-message__input-image-file"}
+        %input{type: "submit", class: "chat-main__message-form__new-message__send-btn", value: "Send"}
