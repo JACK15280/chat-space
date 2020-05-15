@@ -3,20 +3,23 @@
 
     %div.side-bar__user-name
       %div.side-bar__user-name__top-items
-        %p.side-bar__user-name__top-items__name masa
+        %p.side-bar__user-name__top-items__name
+          = current_user.name
         %ul.side-bar__user-name__top-items__icon
           %li.side-bar__user-name__top-items__new-group
           = link_to "#", class: "side-bar__user-name__top-items__btn" do
             %i.far.fa-edit
             %span<>
           %li.side-bar__user-name__top-items__edit-account
-          = link_to "#", class: "side-bar__user-name__top-items__btn" do
+          = link_to edit_user_path(current_user), class: "side-bar__user-name__top-items__btn" do
             %i.fa.fa-cog
             %span<>
 
     %div.side-bar__group-list
-      %p.side-bar__group-list--name techcamp
-      %p.side-bar__group-list--message まだメッセージがありません
+      %p.side-bar__group-list--name
+        techcamp
+      %p.side-bar__group-list--message
+        まだメッセージがありません
 
 
   %div.chat-main
