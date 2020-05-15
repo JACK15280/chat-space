@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-$white: #ffffff;
+$whites: #ffffff;
 $sky-blue: #38aef0;
 
 
@@ -28,7 +28,7 @@ $sky-blue: #38aef0;
       display: flex;
       justify-content: space-between;
       &__name {
-        color: $white;
+        color: $whites;
         line-height: 20px;
         font-weight: bold;
       }
@@ -38,7 +38,7 @@ $sky-blue: #38aef0;
         justify-content: flex-end;
       }
       &__btn {
-        color: $white;
+        color: $whites;
         text-decoration: none;
         line-height: 20px;
         margin-left: 5px;
@@ -48,7 +48,7 @@ $sky-blue: #38aef0;
   &__group-list {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
-    color: $white-color;
+    color: $whites;
     padding: 20px 20px 40px;
     &--name {
       font-size: 15px;
@@ -66,7 +66,7 @@ $sky-blue: #38aef0;
   width: calc(100% - 300px);
   &__group-info {
     height: 100px;
-    background-color: $white;
+    background-color: $whites;
     border-bottom: 1px solid #eeeeee;
     display: flex;
     justify-content: space-between;
