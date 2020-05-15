@@ -11,9 +11,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def destroy
-    current_user.destroy
-  end
+
 
   private
 
