@@ -1,25 +1,23 @@
-%div.wrapper
-  %div.side-bar
+.side-bar
+  .side-bar__user-name
+    .side-bar__user-name__top-items
+      %p.side-bar__user-name__top-items__name
+        = current_user.name
+      %ul.side-bar__user-name__top-items__icon
+        %li.side-bar__user-name__top-items__new-group
+        = link_to new_group_path, class: "side-bar__user-name__top-items__btn" do
+          %i.far.fa-edit
+          %span<>
+        %li.side-bar__user-name__top-items__edit-account
+        = link_to edit_user_path(current_user), class: "side-bar__user-name__top-items__btn" do
+          %i.fa.fa-cog
+          %span<>
 
-    %div.side-bar__user-name
-      %div.side-bar__user-name__top-items
-        %p.side-bar__user-name__top-items__name
-          = current_user.name
-        %ul.side-bar__user-name__top-items__icon
-          %li.side-bar__user-name__top-items__new-group
-          = link_to new_group_path, class: "side-bar__user-name__top-items__btn" do
-            %i.far.fa-edit
-            %span<>
-          %li.side-bar__user-name__top-items__edit-account
-          = link_to edit_user_path(current_user), class: "side-bar__user-name__top-items__btn" do
-            %i.fa.fa-cog
-            %span<>
-
-    %div.side-bar__group-list
-      - current_user.groups.each do |group|
-        .group
-          = link_to "#" do
-            .side-bar__group-list--name
-              = group.name
-            .side-bar__group-list--message
-              まだメッセージがありません
+  .side-bar__group-list
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          .side-bar__group-list--name
+            = group.name
+          .side-bar__group-list--message
+            = group.show_last_message
