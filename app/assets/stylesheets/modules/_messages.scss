@@ -100,6 +100,7 @@ $sky-blue: #38aef0;
     height: calc(100vh - 190px);
     background-color: #fafafa;
     padding-left: 40px;
+    overflow: scroll;
     &--summary {
       display: flex;
       padding-top: 35px;
@@ -110,11 +111,13 @@ $sky-blue: #38aef0;
       &__name {
         color: #333333;
         font-size: 16px;
+        font-weight: bold;
         padding-bottom: 12px;
       }
       &__daily {
         color: #999999;
         font-size: 12px;
+        margin-left: 10px;
       }
       &__message {
         color: #434A54;
